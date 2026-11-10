@@ -1,0 +1,113 @@
+{
+  "n_test_images": 1000,
+  "n_cw_images": 200,
+  "epsilon_pixel_space": 0.3,
+  "epsilon_normalised": 0.9737,
+  "attacks": [
+    {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.107,
+      "attack_success_rate": 0.885,
+      "mean_linf_perturbation": 0.9737,
+      "mean_l2_perturbation": 18.66,
+      "attack": "FGSM"
+    },
+    {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.0,
+      "attack_success_rate": 0.992,
+      "mean_linf_perturbation": 0.9737,
+      "mean_l2_perturbation": 18.0234,
+      "attack": "PGD"
+    },
+    {
+      "clean_accuracy": 1.0,
+      "adversarial_accuracy": 0.275,
+      "attack_success_rate": 0.725,
+      "mean_linf_perturbation": 1.2445,
+      "mean_l2_perturbation": 3.7434,
+      "attack": "CW (L2)"
+    }
+  ],
+  "epsilon_sweep": {
+    "0.05": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.954,
+      "attack_success_rate": 0.038,
+      "mean_linf_perturbation": 0.1623,
+      "mean_l2_perturbation": 3.1775
+    },
+    "0.1": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.85,
+      "attack_success_rate": 0.142,
+      "mean_linf_perturbation": 0.3246,
+      "mean_l2_perturbation": 6.3208
+    },
+    "0.15": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.643,
+      "attack_success_rate": 0.349,
+      "mean_linf_perturbation": 0.4869,
+      "mean_l2_perturbation": 9.4382
+    },
+    "0.2": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.385,
+      "attack_success_rate": 0.607,
+      "mean_linf_perturbation": 0.6491,
+      "mean_l2_perturbation": 12.5337
+    },
+    "0.25": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.201,
+      "attack_success_rate": 0.791,
+      "mean_linf_perturbation": 0.8114,
+      "mean_l2_perturbation": 15.6085
+    },
+    "0.3": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.107,
+      "attack_success_rate": 0.885,
+      "mean_linf_perturbation": 0.9737,
+      "mean_l2_perturbation": 18.66
+    },
+    "0.4": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.049,
+      "attack_success_rate": 0.943,
+      "mean_linf_perturbation": 1.2983,
+      "mean_l2_perturbation": 24.7072
+    },
+    "0.5": {
+      "clean_accuracy": 0.992,
+      "adversarial_accuracy": 0.05,
+      "attack_success_rate": 0.942,
+      "mean_linf_perturbation": 1.6228,
+      "mean_l2_perturbation": 30.6763
+    }
+  },
+  "defences": [
+    {
+      "defence": "No Defence",
+      "clean_acc": 0.9919999837875366,
+      "adv_acc": 0.10700000077486038
+    },
+    {
+      "defence": "Smoothing (\u03c3=0.5)",
+      "clean_acc": 0.9909999966621399,
+      "adv_acc": 0.15299999713897705
+    },
+    {
+      "defence": "Smoothing (\u03c3=1.5)",
+      "clean_acc": 0.972000002861023,
+      "adv_acc": 0.574999988079071
+    },
+    {
+      "defence": "Adv. Training",
+      "clean_acc": 0.982,
+      "adv_acc": 0.936,
+      "pgd_acc": 0.859
+    }
+  ]
+}
